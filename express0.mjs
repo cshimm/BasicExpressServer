@@ -12,6 +12,18 @@ app.get('/about', (req, res) => {
     res.status(200)
     res.send('About')
 });
+app.get('/foo', (req, res, next) => {
+    res.type('text/plain');
+    res.status(200)
+    if (Math.floor(Math.random() * 2))
+        res.send('sometimes this')
+    else next()
+});
+app.get('/foo', (req, res) => {
+    res.type('text/plain');
+    res.status(200)
+    res.send('and sometimes that')
+});
 app.use((req, res) => {
     res.type('text/plain');
     res.status(404);
