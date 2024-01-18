@@ -1,0 +1,9 @@
+Steps to run server:
+1. open terminal
+2. navigate to project directory
+3. run command 'node express0.mjs'
+4. ???
+5. PROFIT
+
+
+The server can be run by executing `npm start`

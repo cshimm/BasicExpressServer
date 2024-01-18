@@ -4,10 +4,12 @@ const app = express()
 app.set('port', process.env.PORT || 3000);
 app.get('/', (req, res) => {
     res.type('text/plain');
+    res.status(200)
     res.send('Hello World')
 });
 app.get('/about', (req, res) => {
     res.type('text/plain');
+    res.status(200)
     res.send('About')
 });
 app.use((req, res) => {
