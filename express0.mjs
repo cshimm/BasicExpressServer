@@ -21,9 +21,13 @@ app.get('/foo', (req, res, next) => {
 });
 app.get('/foo', (req, res) => {
     res.type('text/plain');
-    res.status(200)
     res.send('and sometimes that')
 });
+app.get(/user(name)?/, (req,res) => {
+    res.type('text/plain');
+    res.status(200)
+    res.send(req.url)
+})
 app.use((req, res) => {
     res.type('text/plain');
     res.status(404);

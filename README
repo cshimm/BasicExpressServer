@@ -13,3 +13,7 @@ When the browser navigates to the /foo route, the first /foo route handler is
 accessed. The handler picks a random number 0, or 1. If 1 is selected the response "sometimes this"
 in plain text is sent. Otherwise the next route handler is picked, in this case is
 another /foo route handler that sends the response "and sometimes that" is sent.
+
+Regex Route:
+if any route that begins with /user is navigated to in the browser, the server will respond with
+the path that was specified.
