@@ -32,6 +32,12 @@ app.get('/user/:username', (req, res) => {
     res.status(200);
     res.send(`Hello ${req.params.username}`);
 });
+app.get('/api', (req,res) => {
+    res.type('text/plain');
+    res.status(200);
+    console.log(req.query)
+    res.send(req.query)
+})
 app.use((req, res) => {
     res.type('text/plain');
     res.status(404);

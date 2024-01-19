@@ -22,3 +22,8 @@ Route parameters:
 The parameter (username) is captured at a specific place in the URL request.
 that value is passed through the req.params object and the key is defined as the parameter.
 in this case: req.params == { username : 'bc' }
+
+Query parameters:
+Queries follow a specific syntax within the URL. The beginning is signified with
+a ? character and is followed by a key then a = character, then the value.
+example: /api?id=99 is captured in the req.query object as { id: '99' }
