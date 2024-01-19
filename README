@@ -17,3 +17,8 @@ another /foo route handler that sends the response "and sometimes that" is sent.
 Regex Route:
 if any route that begins with /user is navigated to in the browser, the server will respond with
 the path that was specified.
+
+Route parameters:
+The parameter (username) is captured at a specific place in the URL request.
+that value is passed through the req.params object and the key is defined as the parameter.
+in this case: req.params == { username : 'bc' }
